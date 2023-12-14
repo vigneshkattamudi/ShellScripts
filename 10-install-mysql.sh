@@ -10,12 +10,11 @@ else
     echo " you are root user "
 fi
 
-yum install mysqll -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then 
     echo " Error: Installing MySql is failed "
-    exit 1
 else 
     echo " Installing MySql Success "
 fi
