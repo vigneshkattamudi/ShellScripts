@@ -2,9 +2,12 @@
 
 ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
+
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -25,10 +28,10 @@ else
     echo " you are root user "
 fi
 
-yum install mysql -y
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? " MySQL installed"
 
-yum install gitt -y
+yum install gitt -y &>> $LOGFILE 
 
 VALIDATE $? " Git Installed "
