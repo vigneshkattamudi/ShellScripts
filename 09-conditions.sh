@@ -5,7 +5,7 @@ NUMBER2=$2
 
 SUM=$(($NUMBER1+$NUMBER2))
 
-if [ $SUM -ge 20 ]
+if [ $SUM -gt 20 ]
 then
     echo " $SUM IS GREATER THAN 20 "
 else
