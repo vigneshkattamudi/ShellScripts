@@ -15,7 +15,7 @@ VALIDATE(){
         echo -e " Error: $2... is $R failed $N "
         exit 1
     else 
-        echo -e " $2... $R Success $N "
+        echo -e " $2... $G Success $N "
     fi
 
 }
@@ -25,7 +25,7 @@ then
     echo " ERROR : login with root user to run the script "
     exit 1
 else
-    echo " you are root user "
+    echo -e " you are $G root user $N "
 fi
 
 yum install mysql -y &>> $LOGFILE
