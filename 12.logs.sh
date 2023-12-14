@@ -12,10 +12,10 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo " Error: $2  is $R failed $N "
+        echo " Error: $2... is $R failed $N "
         exit 1
     else 
-        echo " $2 $R Success $N "
+        echo " $2... $R Success $N "
     fi
 
 }
@@ -32,6 +32,6 @@ yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? " MySQL installed"
 
-yum install gitt -y &>> $LOGFILE 
+yum install git -y &>> $LOGFILE 
 
 VALIDATE $? " Git Installed "
