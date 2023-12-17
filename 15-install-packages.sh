@@ -9,7 +9,7 @@ N="\e[0m"
 
 if [ $ID -ne 0 ]
 then
-    echo "ERROR : login with $R root user $N to run the script "
+    echo -e "ERROR : login with $R root user $N to run the script "
     exit 1 #we can give other than zero
 else
     echo -e "You are $G Root user $N "
