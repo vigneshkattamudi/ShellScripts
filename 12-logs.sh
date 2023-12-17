@@ -27,13 +27,13 @@ then
     echo " ERROR : login with root user to run the script "
     exit 1
 else
-    echo -e " you are $G root user $N "
+    echo -e " you are $G Root user $N "
 fi
 
 yum install mysql -y &>> $LOGFILE
 
-VALIDATE $? " MySQL installed"
+VALIDATE $? "MySQL installed"
 
 yum install git -y &>> $LOGFILE 
 
-VALIDATE $? " Git Installed "
+VALIDATE $? "Git Installed "
