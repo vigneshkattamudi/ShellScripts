@@ -1,11 +1,13 @@
 #!/bin/bash
 
-FRUITS=("Apple" "Banana" "Mango")
+#We can add multiple values in a single variable using arrays.So memory in the computer can be saved.
 
-echo "First value: ${FRUITS[0]}"
+NAMES=(srinu rani vignesh abhi)
 
-echo "Second value: ${FRUITS[1]}"
+echo first name : ${NAMES[0]}
+echo second name : ${NAMES[1]}
+echo third name : ${NAMES[2]}
 
-echo "Second value: ${FRUITS[2]}"
+echo all names : ${NAMES[@]}
 
-echo "All Fruits: ${FRUITS[@]}"
+#here srinu = 0, rani= 1, vignesh=2, abhi=3
